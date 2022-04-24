@@ -37,5 +37,5 @@ end
 
 d=range(-2,2,length=N)
 
-plot(d,count_bins(-2,2,M,Ek)/(4/M))
+plot(d,count_bins(-2,2,M,Ek))
 savefig("DOS-def")
