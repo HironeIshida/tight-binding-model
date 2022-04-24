@@ -23,11 +23,11 @@ function count_bins(xmin,xmax,n,data)
     d=range(xmin,xmax,length=n)
     count=zeros(Int64,n)
 
-    Delta=(xmax-xmin+1)/n
+    Delta=(xmax-xmin)/n
 
     for i in data
         e=convert(Int64,ceil((i-xmin)/Delta))
-        count[e+1] += 1
+        count[e] += 1
     end
 
     return count
