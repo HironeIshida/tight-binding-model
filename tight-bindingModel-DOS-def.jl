@@ -8,8 +8,8 @@ a=1
 using Plots
 
 
-N=10000 #kの刻み
-M=10000 #epsilonの刻み
+N=100000 #kの刻み
+M=100000 #epsilonの刻み
 
 function EK(k)
     return -2*cos(k)
