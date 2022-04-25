@@ -35,7 +35,7 @@ end
 
 #println(count_bins(-2,2,M,Ek))
 
-d=range(-2,2,length=N)
+d=range(-3,3,length=N)
 
-plot(d,count_bins(-2,2,M,Ek))
+plot(d,count_bins(-3,3,M,Ek))
 savefig("DOS-def")
