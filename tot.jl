@@ -28,10 +28,19 @@ function count_bins(xmin,xmax,n,data)
     return count
 end
 
+#規格化定数を求める
+Integral = 0
+
+for i in 2:M
+    S = (count_bins(-2,2,M,Ek)[i-1] + count_bins(-3,3,M,Ek)[i]) * (4 / M) / 2
+    global Integral += S
+end
+
+
 d=range(-2,2,length=M)
 
 Ds = D.(d)
 
-plot(d,count_bins(-2,2,M,Ek)/M)
+plot(d,count_bins(-2,2,M,Ek)/Integral)
 plot!(d,Ds)
 savefig("DOS")

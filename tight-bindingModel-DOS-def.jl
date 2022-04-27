@@ -24,7 +24,16 @@ function count_bins(xmin, xmax, n, data)
     return count
 end
 
-d = range(-3, 3, length=M)
 
-scatter(d, count_bins(-3,3,M,Ek), markersize=2)
+#規格化定数を求める
+Integral = 0
+
+for i in 2:M
+    S = (count_bins(-2,2,M,Ek)[i-1] + count_bins(-3,3,M,Ek)[i]) * (4 / M) / 2
+    global Integral += S
+end
+
+d = range(-2, 2, length=M)
+
+scatter(d, count_bins(-2, 2, M, Ek)/Integral, markersize=2)
 savefig("DOS-def")
