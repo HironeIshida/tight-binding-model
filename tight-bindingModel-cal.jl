@@ -10,6 +10,7 @@ n=1000
 Es = range(-2,2,length=n)
 Ds = D.(Es)
 
+
 plot(Es,Ds,
     xlabel = "energy",
     ylabel = "dencity of state (DOS)",
