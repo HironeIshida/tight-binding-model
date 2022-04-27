@@ -1,12 +1,4 @@
-#Ek=-2tcos(ka)を使って状態密度を定義から計算する．D(E)=\sum_{k}\delta(E-Ek)
-#=
-t=1
-a=1
-=#
-
-
 using Plots
-
 
 N=1000000 #kの刻み
 M=1000 #epsilonの刻み
@@ -17,7 +9,6 @@ end
 
 k=range(-π,π,length=N)
 Ek=EK.(k)
-
 
 function count_bins(xmin,xmax,n,data)
     d=range(xmin,xmax,length=n)
