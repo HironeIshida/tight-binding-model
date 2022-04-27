@@ -8,8 +8,8 @@ a=1
 using Plots
 
 
-N=100000 #kの刻み
-M=100000 #epsilonの刻み
+N=1000000 #kの刻み
+M=1000 #epsilonの刻み
 
 function EK(k)
     return -2*cos(k)
@@ -33,9 +33,7 @@ function count_bins(xmin,xmax,n,data)
     return count
 end
 
-#println(count_bins(-2,2,M,Ek))
+d=range(-3,3,length=M)
 
-d=range(-3,3,length=N)
-
-plot(d,count_bins(-3,3,M,Ek))
+scatter(d,count_bins(-3,3,M,Ek),markersize=2)
 savefig("DOS-def")
