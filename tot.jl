@@ -1,6 +1,5 @@
 using Plots
 
-
 N=100000 #kの刻み
 M=1000 #epsilonの刻み
 
@@ -14,7 +13,6 @@ end
 
 k=range(-π,π,length=N)
 Ek=EK.(k)
-
 
 function count_bins(xmin,xmax,n,data)
     d=range(xmin,xmax,length=n)
@@ -32,13 +30,7 @@ end
 
 d=range(-2,2,length=M)
 
-
-
-
-
 Ds = D.(d)
-
-
 
 plot(d,count_bins(-2,2,M,Ek)/M)
 plot!(d,Ds)
